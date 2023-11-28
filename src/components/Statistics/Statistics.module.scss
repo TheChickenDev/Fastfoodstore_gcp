@@ -1,0 +1,157 @@
+.wrapper {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #ffbb00;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #f17a00;
+    }
+}
+
+.table-container {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+
+    td,
+    th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+    }
+}
+
+.method {
+    display: flex;
+    width: 130px;
+}
+
+.method-btn {
+    font-size: 1.4rem;
+    font-weight: 500;
+    background-color: transparent;
+    padding: 4px 8px;
+    cursor: not-allowed;
+    color: #656565;
+    user-select: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &.active {
+        color: #4000ff;
+        cursor: pointer;
+        user-select: auto;
+    }
+}
+
+.statistics {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+
+    p {
+        font-size: 2rem;
+        color: #fd0000;
+    }
+}
+
+.details {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+
+    &.active {
+        display: flex;
+    }
+}
+
+.details-container {
+    width: 60%;
+    background-color: #fff;
+    display: flex;
+    border-radius: 8px;
+    position: relative;
+}
+
+.subtitle {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin: 0 0 12px 12px;
+}
+
+.cart,
+.info {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 12px;
+    font-size: 1.6rem;
+}
+
+.cart-item {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 4px;
+    font-size: 2rem;
+
+    &:hover {
+        background-color: #f1f1f1;
+    }
+}

@@ -1,0 +1,135 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 128px;
+    font-size: 1.6rem;
+    background-color: #f1f1f1;
+}
+
+.footer-section {
+    flex: 0 0 50%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    ~ .footer-section {
+        margin-left: 24px;
+    }
+}
+
+.footer-logo {
+    display: block;
+    width: 100px;
+    height: 80px;
+    margin-bottom: 12px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.footer-info p {
+    padding: 12px 0;
+}
+
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.footer-link {
+    padding: 8px 0;
+    width: 100%;
+    color: #000;
+    transition: color linear 0.2s;
+
+    &:hover {
+        color: #df0000;
+    }
+}
+
+.footer-time {
+    margin-left: 64px;
+}
+
+.footer-timestamp {
+    padding: 8px 0;
+}
+
+.footer-media {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.footer-media-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #515151;
+    border-radius: 50%;
+    transition: color linear 0.2s, border-color linear 0.2s;
+
+    &:hover {
+        color: #df0000;
+        border-color: #df0000;
+    }
+
+    ~ .footer-media-item {
+        margin-left: 16px;
+    }
+}
+
+// responsive
+@media (max-width: 1199px) {
+    .footer-media-item {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 64px;
+    }
+
+    .footer-section {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-section-container,
+    .footer-time {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 0 24px;
+    }
+
+    .footer-quicklinks {
+        display: none;
+    }
+
+    .footer-title {
+        margin-bottom: 12px;
+    }
+}

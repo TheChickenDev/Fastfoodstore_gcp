@@ -1,0 +1,338 @@
+.wrapper {
+    background: url('../../assets/images/about/slogan.jpg') top center / cover no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    margin-top: var(--header-height);
+}
+#content {
+    width: 100%;
+}
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pad100 {
+    padding: 0 100px;
+}
+
+.col {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-third {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-four {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.introduce-text {
+    width: 100%;
+}
+.introduce .introduce-text__item {
+    padding: 12px 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+.introduce {
+    padding: 50px 32px;
+    width: 100%;
+    background-color: #fff;
+}
+.introduce-img > img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.service {
+    width: 100%;
+    padding: 50px 32px;
+    background-color: #efefef;
+}
+.service-card {
+    width: 100%;
+    margin: 12px 0;
+    padding: 0 8px;
+}
+.service-card__img > img {
+    width: 100%;
+    border-radius: 5px;
+}
+.service-card__text {
+    word-wrap: break-word;
+    text-align: center;
+}
+.service-card__text > h2 {
+    margin: 12px 0;
+}
+.service-card__text > p {
+    margin: 8px 0;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.slogan {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.slogan-item {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    bottom: calc(50% - 23px);
+}
+.ourChef {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+.ourChef-card {
+    width: 100%;
+}
+.ourChef-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 4/3;
+    margin-top: 24px;
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        max-height: 300px;
+        border-style: solid;
+        border-color: #a40301;
+        border-width: 10px 0px 0px 10px;
+        border-radius: 20% 5% 10% 5%;
+        transition-duration: 0.3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+
+        &:hover {
+            transform: translateY(-8px);
+            border-color: #000;
+        }
+    }
+}
+.ourChef-text__item {
+    margin: 36px 0;
+}
+.ourChef-text__item > h1 {
+    margin-bottom: 12px;
+}
+.ourChef-card__text {
+    margin-top: 12px;
+}
+.ourChef-card__text > h3 {
+    margin: 8px 0;
+}
+
+.comment {
+    position: relative;
+    min-height: 50vh;
+    padding: 32px;
+    background-color: #efefef;
+}
+.comment-header__text {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.direction {
+    text-align: center;
+}
+.direction button {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 2.4rem;
+    background-color: #ffffff44;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin: 0 10px;
+}
+
+.direction button:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.item {
+    border-radius: 15px;
+    width: 300px;
+    height: 400px;
+    background-image: linear-gradient(to top, #aec0ce, #ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 10px;
+    scroll-snap-align: start;
+}
+
+.item .avatar {
+    display: block;
+    margin: 0px auto 10px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.item .content {
+    padding: 30px;
+    text-align: center;
+    font-family: monospace;
+}
+.item .content h2 {
+    padding: 8px 0;
+}
+.item .content p {
+    padding: 2px 0;
+}
+
+#list {
+    display: flex;
+    width: max-content;
+}
+#formList {
+    width: 1280px;
+    max-width: 100%;
+    margin: 50px auto;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+
+#formList::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .item {
+        width: calc(33.3vw - 44px);
+    }
+    #prev,
+    #next {
+        display: none;
+    }
+}
+@media screen and (max-width: 760px) {
+    .item {
+        width: calc(98vw - 50px);
+    }
+}
+
+.totop {
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #a40301;
+}
+.totop:hover {
+    cursor: pointer;
+    background-color: #eeb314;
+}
+.cvn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cvn-card {
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    padding: 8px 0;
+    border: 1px dashed #333;
+}
+.cvn-card__img {
+    width: 50%;
+}
+.cvn-card__img > img {
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+}
+
+@media ((min-width: 761px) and ( max-width: 1023px)) {
+    .introduce {
+        align-items: center;
+        justify-content: center;
+    }
+    .introduce-text {
+        text-align: center;
+    }
+    .col {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .col-third,
+    .col-four {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .pad100 {
+        padding: 0 12px;
+    }
+    .totop {
+        width: 40px;
+        height: 40px;
+        bottom: 100px;
+        right: 10px;
+    }
+}
+@media (max-width: 760px) {
+    .introduce-text {
+        text-align: center;
+    }
+    .col {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .col-half,
+    .col-third,
+    .col-four {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .cvn-card {
+        max-width: 40%;
+        margin: 4px 2px;
+    }
+    .pad100 {
+        padding: 0 4px;
+    }
+    .totop {
+        width: 40px;
+        height: 40px;
+        bottom: 100px;
+        right: 10px;
+    }
+}
